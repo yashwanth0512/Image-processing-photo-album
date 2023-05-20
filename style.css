@@ -1,0 +1,61 @@
+.album {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 10px;
+}
+
+.album img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.album img:hover {
+    transform: scale(1.2);
+} 
+.album img.selected {
+    border: 2px solid blue;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+  
+button:hover {
+    background-color: #45a049;
+}
+.button-container button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.reddish {
+    filter: hue-rotate(45deg);
+}
+.grayscale {
+    filter: grayscale(100%);
+}
+.qr-code {
+    display: inline-block;
+    margin-top: 10px;
+}
+.qr-code img {
+    width: 128px;
+    height: 128px;
+  }

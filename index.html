@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Proccessing Album</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/dist/qrcode.min.js"></script>
+
+</head>
+<body>
+  <center><h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">IMAGE PROCESSING GALLERY</h1></center>
+  <center><code>scroll down for functions</code></center>
+
+  <div class="album">
+    <img src="1.jpg" id="image1" onclick="selectImage('image1')">
+    <img src="5.jpg" id="image2" onclick="selectImage('image2')">
+    <img src="6.jpg" id="image3" onclick="selectImage('image3')">
+    <img src="7.jpg" id="image4" onclick="selectImage('image4')">
+  </div>
+  <br><br><br>
+  <div class="album">
+    <img src="8.jpg" id="image5" onclick="selectImage('image5')">
+    <img src="11.jpg" id="image6" onclick="selectImage('image6')">
+    <img src="14.jpg" id="image7" onclick="selectImage('image7')">
+    <img src="15.jpg" id="image8" onclick="selectImage('image8')">
+  </div>
+  <div class="button-container">
+    <span><button>brightness</button></span>
+    <button onclick="increaseBrightness()">+</button>
+    <button onclick="decreaseBrightness()">-</button>
+  </div>
+
+
+  <div class="button-container">
+    <button onclick="checkColor()">Check Color</button>
+    <button onclick="makeReddish()">Make Reddish</button>
+    <button onclick="makeBlue()">Make Bluish</button>
+    <button onclick="makeGreen()">make Green</button>
+    <button onclick="duplicateImage()">Duplicate Image</button>
+    <button onclick="reduceResolution(200, 200)">Reduce Resolution</button>
+    <button onclick="makeGrayscale()">Make Grayscale</button>
+    <button onclick="generateQRCode()">Generate QR Code</button>
+    <div id="thumbnail-container"></div>
+    <button onclick="createThumbnail()">Thumbnail</button>
+  </div>
+<center><code>QR code is generated only when there is no other function applied before.</code></center>
+<script src="script.js"></script>
+
+    
+</body>
+</html>
