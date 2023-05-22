@@ -46,6 +46,30 @@
     <button onclick="createThumbnail()">Thumbnail</button>
   </div>
 <center><code>QR code is generated only when there is no other function applied before.</code></center>
+<script>
+  // Get all the images
+const images = document.querySelectorAll('.album img');
+
+// Attach event listeners to each image
+images.forEach((image) => {
+image.addEventListener('mouseover', function() {
+// Get the source of the current image
+const imageSrc = this.src;
+
+// Set the background image of the body element to the current image
+document.body.style.backgroundImage = `url(${imageSrc})`;
+document.body.style.backgroundSize = 'cover'; // Adjust background size to cover the entire body
+});
+
+image.addEventListener('mouseout', function() {
+// Reset the background image of the body element
+document.body.style.backgroundImage = 'none';
+});
+});
+
+
+
+</script>
 <script src="script.js"></script>
 
     
